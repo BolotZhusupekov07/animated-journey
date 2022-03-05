@@ -24,6 +24,16 @@ $ git clone https://github.com/BolotZhusupekov07/news-comments-app
 ```
 #### __2. Create .env file 
 
+$ SECRET_KEY = 
+$ DEBUG = 
+$ ALLOWED_HOSTS = 
+
+$ DB_NAME =
+$ DB_USER = 
+$ DB_PASSWORD = 
+$ DB_HOST = 
+$ DB_PORT = 
+
 #### __3. Build the Docker Image__
 In terminal:
 
