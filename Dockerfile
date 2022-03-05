@@ -4,9 +4,9 @@ ENV PYTHONDONTWRITEBYTECODE 1
 
 ENV PYTHONUNBUFFERED 1
 
+ENV ALLOWED_HOSTS *
+
 WORKDIR /code
-
-
 
 RUN pip install --upgrade pip
 COPY ./requirements.txt .
