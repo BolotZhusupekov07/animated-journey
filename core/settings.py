@@ -26,6 +26,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -90,6 +91,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
@@ -98,13 +101,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-CELERY_BROKER_URL = "redis://redis:6379"
-
-CELERY_RESULT_BACKEND = "redis://redis:6379"
-
-CELERY_BEAT_SCHEDULE = {
-    "reset_votes_task": {
-        "task": "news.tasks.reset_votes",
-        "schedule": crontab(minute=0, hour=0),  # execute daily at midnight
-    }
-}
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
