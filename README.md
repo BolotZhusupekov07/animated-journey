@@ -1,4 +1,6 @@
 ## NEWS MVP API
+
+##### Recurring job running once a day to reset post upvotes count is only at local version. I didn't deploy it to Heroku because celery or crontab was not free, and asked for credit card info.
 ---
 ### __Postman collection__
 
