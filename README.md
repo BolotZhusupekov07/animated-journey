@@ -22,26 +22,15 @@ machine for development and testing purposes.
 ```
 $ git clone https://github.com/BolotZhusupekov07/news-comments-app
 ```
-#### __2. Create .env file 
 
-$ SECRET_KEY = 
-$ DEBUG = 
-$ ALLOWED_HOSTS = 
-
-$ DB_NAME =
-$ DB_USER = 
-$ DB_PASSWORD = 
-$ DB_HOST = 
-$ DB_PORT = 
-
-#### __3. Build the Docker Image__
+#### __2. Build the Docker Image__
 In terminal:
 
 ```
 $ docker-compose build 
 ```
 
-#### __4.Run the project__
+#### __3.Run the project__
 Start the development server and ensure everything is running without errors.
 ```
 $ docker-compose up
