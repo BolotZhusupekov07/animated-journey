@@ -14,3 +14,6 @@ RUN pip install -r requirements.txt
 
 
 COPY . /code/
+
+
+RUN python manage.py collectstatic --noinput
